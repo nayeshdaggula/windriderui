@@ -19,6 +19,7 @@ export function Button({
     color = 'blue',
     className = '',
 }: ButtonProps) {
+    
     const sizeClasses = {
         xs: 'size-xs',
         sm: 'size-sm',

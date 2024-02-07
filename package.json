@@ -1,7 +1,7 @@
 {
-  "name": "tspackage",
+  "name": "@nayeshdaggula/windriderui",
   "version": "1.0.0",
-  "description": "",
+  "description": "Windrider UI is a collection of React components with Tailwindcss.",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
@@ -12,9 +12,13 @@
     "build": "rollup -c",
     "build:watch": "rollup -c --watch"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "react",
+    "tailwindcss",
+    "windriderui"
+  ],
+  "author": "Nayesh Daggula",
+  "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
@@ -41,5 +45,12 @@
   },
   "dependencies": {
     "clsx": "^2.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nayeshdaggula/windriderui"
   }
 }
