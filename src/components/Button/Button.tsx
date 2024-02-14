@@ -18,14 +18,15 @@ export function Button({
     rounded = 'md',
     color = 'blue',
     className = '',
+    ...props
 }: ButtonProps) {
-    
+
     const sizeClasses = {
-        xs: 'size-xs',
-        sm: 'size-sm',
-        md: 'size-md',
-        lg: 'size-lg',
-        xl: 'size-xl',
+        xs: 'px-[0.875rem] text-xs font-medium h-[1.875rem]',
+        sm: 'px-[1.125rem] text-sm font-medium h-[2.25rem]',
+        md: 'px-[1.375rem] text-base font-medium h-[2.625rem]',
+        lg: 'px-[1.625rem] text-lg font-medium h-[3.125rem]',
+        xl: 'px-[2rem] text-xl font-medium h-[3.5rem]',
     };
 
     const roundedClasses = {
@@ -113,7 +114,10 @@ export function Button({
     );
 
     return (
-        <button className={buttonClasses}>
+        <button 
+            className={buttonClasses}
+            {...props}
+        >
             {children}
         </button>
     );

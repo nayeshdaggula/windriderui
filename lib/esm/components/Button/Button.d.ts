@@ -8,5 +8,5 @@ interface ButtonProps {
     color?: 'black' | 'white' | 'red' | 'green' | 'blue' | 'yellow' | 'purple' | 'pink' | 'indigo' | 'teal' | 'gray' | 'orange' | 'cyan' | 'lime' | 'amber' | 'emerald' | 'lightBlue' | 'violet' | 'fuchsia' | 'rose' | 'warmGray' | 'trueGray' | 'coolGray' | 'blueGray';
     className?: string;
 }
-export declare function Button({ children, size, variant, rounded, color, className, }: ButtonProps): React.JSX.Element;
+export declare function Button({ children, size, variant, rounded, color, className, ...props }: ButtonProps): React.JSX.Element;
 export {};
