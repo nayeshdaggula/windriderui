@@ -43,5 +43,5 @@ const GridItem: React.FC<GridItemProps> = ({
 // Assign GridItem as a static property of Grid
 Grid.Item = GridItem;
 
-export default Grid;
+export {Grid};
 export type { GridProps, GridItemProps };
