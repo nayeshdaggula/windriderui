@@ -4,6 +4,7 @@ import typescript from "@rollup/plugin-typescript";
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
 
 import pkg from './package.json' assert { type: 'json' };
 
@@ -26,10 +27,14 @@ export default [
       peerDepsExternal(),
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),,
+      typescript({ tsconfig: "./tsconfig.json" }),
       postcss({
+        extract: true,  // Ensure CSS is extracted
         minimize: true,
-        plugins: [tailwindcss('./tailwind.config.js')],
+        plugins: [
+          tailwindcss('./tailwind.config.js'),
+          autoprefixer(),
+        ],
       }),
     ],
   }

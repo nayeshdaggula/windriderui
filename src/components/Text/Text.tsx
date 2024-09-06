@@ -101,8 +101,6 @@ export function Text({
 }: TextProps) {
     const Component = component;
 
-    
-        
     const textClasses = [
         TextSize[size],
         TextColor[color],
@@ -113,15 +111,11 @@ export function Text({
         TextStyles[ts],
         className,
     ]
-    .filter((c) => c)
+    .filter(Boolean)
     .join(' ');
 
-
     return (
-        <Component
-            className={textClasses}
-            {...props}
-        >
+        <Component className={textClasses} {...props}>
             {children}
         </Component>
     );
