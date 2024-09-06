@@ -29,7 +29,7 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss({
-        extract: true,  // Ensure CSS is extracted
+        extract: 'dist/style.css',
         minimize: true,
         plugins: [
           tailwindcss('./tailwind.config.js'),
